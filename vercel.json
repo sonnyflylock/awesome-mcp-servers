@@ -2,43 +2,24 @@
   "version": 2,
   "name": "imagentext",
   "public": true,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "outputDirectory": "imagentext-website",
+  "rewrites": [
+    { "source": "/", "destination": "/imagentext-website/index.html" },
+    { "source": "/css/:path*", "destination": "/imagentext-website/css/:path*" },
+    { "source": "/js/:path*", "destination": "/imagentext-website/js/:path*" },
+    { "source": "/images/:path*", "destination": "/imagentext-website/images/:path*" },
+    { "source": "/:path*", "destination": "/imagentext-website/:path*" }
+  ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/imagentext-website/css/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/css/(.*)",
+      "source": "/imagentext-website/js/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/js/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
   ]
