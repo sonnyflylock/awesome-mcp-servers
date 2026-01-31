@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Extract text from any image instantly with AI-powered OCR. Available as Chrome extension, Windows app, and MCP server.">
+  <meta name="keywords" content="OCR, text extraction, screenshot, AI, Gemini, Claude, GPT, image to text">
+  <meta property="og:title" content="ImagenText - AI-Powered Text Extraction">
+  <meta property="og:description" content="Extract text from any image instantly with AI-powered OCR.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://imagentext.com">
+  <title>ImagenText - AI-Powered Text Extraction from Images</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+            <path d="M8 10h16M8 16h12M8 22h14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">ImagenText</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary">Download Free</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="#features">Features</a>
+    <a href="#platforms">Platforms</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#download" class="btn btn-primary">Download Free</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">Powered by Gemini, Claude & GPT</div>
+        <h1>Extract Text from <span class="gradient-text">Any Image</span> Instantly</h1>
+        <p class="hero-subtitle">
+          AI-powered OCR that actually works. Capture screenshots, extract text, and copy to clipboard in seconds. Available everywhere you need it.
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary btn-large">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download Free
+          </a>
+          <a href="#demo" class="btn btn-secondary btn-large">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Watch Demo
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">10</span>
+            <span class="stat-label">Free extractions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">3</span>
+            <span class="stat-label">AI providers</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">3</span>
+            <span class="stat-label">Platforms</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="app-preview">
+          <div class="preview-window">
+            <div class="window-header">
+              <div class="window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="window-title">Screenshot OCR</span>
+            </div>
+            <div class="window-content">
+              <div class="preview-capture">
+                <div class="capture-icon">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="6" y="6" width="36" height="36" rx="4"/>
+                    <circle cx="16" cy="16" r="3"/>
+                    <path d="M42 30L32 20L10 42"/>
+                  </svg>
+                </div>
+                <span>Click to capture</span>
+              </div>
+              <div class="preview-result">
+                <div class="result-label">Extracted Text</div>
+                <div class="result-text">
+                  <p>Meeting Notes - Q4 Planning</p>
+                  <p>Date: January 31, 2026</p>
+                  <p>Attendees: Sarah, Mike, Lisa</p>
+                  <p class="typing-cursor">Key decisions made...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- Trusted By -->
+  <section class="trusted-by">
+    <div class="container">
+      <p>Powered by leading AI providers</p>
+      <div class="provider-logos">
+        <div class="provider">
+          <svg viewBox="0 0 24 24" class="provider-icon gemini">
+            <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"/>
+          </svg>
+          <span>Gemini</span>
+        </div>
+        <div class="provider">
+          <svg viewBox="0 0 24 24" class="provider-icon claude">
+            <rect x="3" y="3" width="18" height="18" rx="3" fill="currentColor" opacity="0.1"/>
+            <path d="M12 6v12M6 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>Claude</span>
+        </div>
+        <div class="provider">
+          <svg viewBox="0 0 24 24" class="provider-icon openai">
+            <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/>
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" fill="currentColor"/>
+            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          </svg>
+          <span>GPT-5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why ImagenText?</h2>
+        <p>The smartest way to extract text from images</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3>Lightning Fast</h3>
+          <p>Get extracted text in seconds. Our AI processes images instantly, no waiting around.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Privacy First</h3>
+          <p>Your API keys stay local. Images are sent directly to AI providers, never through our servers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3>Works Everywhere</h3>
+          <p>Chrome extension, Windows app, or MCP server. Use it however you work best.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <h3>Auto Clipboard</h3>
+          <p>Extracted text is automatically copied to your clipboard. Ready to paste anywhere.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </div>
+          <h3>Choose Your AI</h3>
+          <p>Switch between Gemini, Claude, and GPT-5. Use the one that works best for your needs.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3>History & Search</h3>
+          <p>All your extractions are saved locally. Find and reuse any previous text with one click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platforms Section -->
+  <section class="platforms" id="platforms">
+    <div class="container">
+      <div class="section-header">
+        <h2>Available Everywhere</h2>
+        <p>Choose the platform that fits your workflow</p>
+      </div>
+      <div class="platforms-grid">
+        <div class="platform-card">
+          <div class="platform-icon chrome">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="4" fill="white"/>
+            </svg>
+          </div>
+          <h3>Chrome Extension</h3>
+          <p>Capture any webpage with one click. Perfect for researchers, students, and web workers.</p>
+          <ul class="platform-features">
+            <li>One-click capture</li>
+            <li>Keyboard shortcut (Ctrl+Shift+O)</li>
+            <li>Works on any webpage</li>
+            <li>Popup interface</li>
+          </ul>
+          <a href="#download" class="btn btn-outline">Add to Chrome</a>
+        </div>
+        <div class="platform-card featured">
+          <div class="featured-badge">Most Popular</div>
+          <div class="platform-icon windows">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+            </svg>
+          </div>
+          <h3>Windows Desktop</h3>
+          <p>Global hotkey captures from anywhere. System tray app runs in the background.</p>
+          <ul class="platform-features">
+            <li>Global hotkey capture</li>
+            <li>System tray integration</li>
+            <li>Works with any app</li>
+            <li>Dark mode UI</li>
+          </ul>
+          <a href="#download" class="btn btn-primary">Download for Windows</a>
+        </div>
+        <div class="platform-card">
+          <div class="platform-icon mcp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 10h-4V6"/>
+              <path d="M14 10l7.586-7.586a2 2 0 1 1 2.828 2.828L16.828 13"/>
+              <circle cx="8" cy="16" r="6"/>
+            </svg>
+          </div>
+          <h3>MCP Server</h3>
+          <p>Integrate with Claude Desktop and other AI assistants. Perfect for developers.</p>
+          <ul class="platform-features">
+            <li>Claude Desktop integration</li>
+            <li>Extract from files or URLs</li>
+            <li>Programmatic access</li>
+            <li>Developer-friendly</li>
+          </ul>
+          <a href="#download" class="btn btn-outline">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section class="demo" id="demo">
+    <div class="container">
+      <div class="demo-content">
+        <h2>See It in Action</h2>
+        <p>Watch how ImagenText extracts text from any image in seconds</p>
+        <div class="demo-video">
+          <div class="video-placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <span>Click to play demo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2>Simple, Transparent Pricing</h2>
+        <p>Start free, upgrade when you need more</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Free</h3>
+          <div class="price">
+            <span class="amount">$0</span>
+          </div>
+          <p class="price-desc">Get started instantly</p>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              10 text extractions
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              All AI providers
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              All platforms
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              History & clipboard
+            </li>
+          </ul>
+          <a href="#download" class="btn btn-outline btn-block">Get Started</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Pay As You Go</h3>
+          <div class="price">
+            <span class="amount">$5</span>
+          </div>
+          <p class="price-desc">50 extractions</p>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              50 text extractions
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Never expires
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              All AI providers
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              All platforms
+            </li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block">Buy Now</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="featured-badge">Best Value</div>
+          <h3>Unlimited</h3>
+          <div class="price">
+            <span class="amount">$10</span>
+            <span class="period">/month</span>
+          </div>
+          <p class="price-desc">Unlimited extractions</p>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Unlimited extractions
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Priority processing
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              All AI providers
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Cancel anytime
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block">Subscribe</a>
+        </div>
+      </div>
+      <p class="pricing-note">All plans require your own API keys from AI providers. <a href="#faq">Learn more</a></p>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="download" id="download">
+    <div class="container">
+      <div class="section-header">
+        <h2>Download ImagenText</h2>
+        <p>Choose your platform and start extracting text in minutes</p>
+      </div>
+      <div class="download-grid">
+        <a href="#" class="download-card">
+          <div class="download-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="4" fill="white"/>
+            </svg>
+          </div>
+          <div class="download-info">
+            <h4>Chrome Extension</h4>
+            <span>Add to Chrome - Free</span>
+          </div>
+          <svg class="download-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#" class="download-card">
+          <div class="download-icon windows">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+            </svg>
+          </div>
+          <div class="download-info">
+            <h4>Windows Desktop</h4>
+            <span>Download .exe - 45 MB</span>
+          </div>
+          <svg class="download-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+        </a>
+        <a href="#" class="download-card">
+          <div class="download-icon github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+          <div class="download-info">
+            <h4>MCP Server</h4>
+            <span>View on GitHub</span>
+          </div>
+          <svg class="download-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about ImagenText</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do I need my own API keys?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, ImagenText uses your own API keys to connect directly to AI providers (Google Gemini, Anthropic Claude, or OpenAI). This ensures your data never passes through our servers and gives you full control over your AI usage and costs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Which AI provider should I use?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Gemini Flash 2.0</strong> is fastest and most cost-effective for general OCR. <strong>Claude</strong> excels at preserving complex formatting and layouts. <strong>GPT-5</strong> is best for handwritten text and unusual fonts. We recommend starting with Gemini.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is my data private?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Your API keys and extracted text are stored locally on your device. Images are sent directly to the AI provider you choose - we never see or store your data. Your extraction history is saved locally and can be cleared at any time.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What counts as an "extraction"?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Each time you capture a screenshot and extract text from it, that counts as one extraction. Viewing your history or copying previously extracted text does not count against your limit.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I use it offline?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>No, ImagenText requires an internet connection to send images to the AI providers for text extraction. However, your extraction history is available offline, and you can copy previously extracted text without a connection.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What's the MCP server for?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>The MCP (Model Context Protocol) server allows AI assistants like Claude Desktop to use ImagenText's OCR capabilities. This means you can ask Claude to "extract text from this image" and it will use ImagenText to do so. It's perfect for developers and power users.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Extract Text Smarter?</h2>
+      <p>Join thousands of users who save hours with AI-powered OCR</p>
+      <a href="#download" class="btn btn-white btn-large">
+        Download Free
+        <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="8" fill="url(#gradient2)"/>
+                <path d="M8 10h16M8 16h12M8 22h14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="gradient2" x1="0" y1="0" x2="32" y2="32">
+                    <stop stop-color="#6366f1"/>
+                    <stop offset="1" stop-color="#8b5cf6"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="logo-text">ImagenText</span>
+          </a>
+          <p>AI-powered text extraction from any image. Fast, private, and available everywhere.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#download">Download</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-links">
+          <h4>Platforms</h4>
+          <a href="#">Chrome Extension</a>
+          <a href="#">Windows Desktop</a>
+          <a href="#">MCP Server</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <a href="#">Documentation</a>
+          <a href="#">GitHub</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ImagenText. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
